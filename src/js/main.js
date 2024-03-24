@@ -100,7 +100,7 @@ elForm.addEventListener("submit", (evt) => {
 // To'g'ri javob
 function roadTrueResponse(questionResult, item) {
   questionResult.classList.remove("hidden");
-  questionResult.querySelector("img").src = "./images/checkmark.gif";
+  questionResult.querySelector("img").src = "./src/images/checkmark.gif";
   let roadAudio = questionResult.querySelector("#road-audio");
   roadAudio.play();
   // questionResult.classList.add("pointer-events-none");
@@ -113,7 +113,7 @@ function roadTrueResponse(questionResult, item) {
 // noto'g'ri javob
 function roatErrorResponse(questionResult, item) {
   questionResult.classList.remove("hidden");
-  questionResult.querySelector("img").src = "./images/error.png";
+  questionResult.querySelector("img").src = "./src/images/error.png";
   let roadErrorAudio = questionResult.querySelector("#road-error-audio");
   roadErrorAudio.play();
   setTimeout(() => {
