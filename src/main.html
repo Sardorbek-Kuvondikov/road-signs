@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Play</title>
+        <link rel="stylesheet" href="./output.css">
+    </head>
+    <body>
+        <!-- header  -->
+        <header>
+            <div class="container m-auto">
+                <div
+                    class=" m-auto mt-[180px] text-white text-center absolute left-[40%] right-[45%]">
+                    <form class="js-play-form">
+                        <strong class=" text-xl">Cложносъ</strong>
+                        <select
+                            class="border-b-2 bg-[#11111100]  block m-auto mt-4 mb-16 js-play-select">
+                            <option class="bg-black"
+                                value="easy">Легкий</option>
+                            <option class="bg-black"
+                                value="normal">Средний</option>
+                            <option class="bg-black"
+                                value="difficult">Сложный</option>
+                        </select>
+
+                        <!-- min -->
+                        <strong class="text-xl">время</strong>
+                        <select
+                            class="bg-[#1110] block m-auto border-b-2 mt-4 mb-[70px]">
+                            <option class="bg-black" value="3">3
+                                мин</option>
+                            <option class="bg-black" value="5">5
+                                мин</option>
+                            <option class="bg-black" value="8">8
+                                мин</option>
+                        </select>
+                        <button
+                            class="p-2 bg-white text-black rounded-full font-semibold text-xl px-8 hover:shadow-lg hover:shadow-[#ffffff67] transition-all js-start-btn"
+                            type="submit">СТАРТ</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <!-- section  -->
+        <section>
+            <div class="container m-auto">
+                <!-- road render-->
+                <div
+                    class="w-[1000px] m-auto mt-8 hidden text-white absolute top-0 left-0 right-0 js-play-modal">
+                    <div
+                        class="flex items-center mb-2 justify-between">
+                        <strong class="js-game-score"></strong>
+                        <strong>Осталось: 3 min</strong>
+                    </div>
+                    <div
+                        class="bg-[#7C7C82] p-5 rounded-sm text-black relative">
+                        <div class="bg-[#A7A7AF] p-5 rounded-sm mb-5">
+                            <p class="text-center js-question"></p>
+                        </div>
+                        <div>
+                            <ul
+                                class="flex items-center justify-between flex-wrap gap-y-2 js-paly-render">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- game over -->
+        <section>
+            <div class="game-over hidden js-game-over">
+                <h2
+                    class="text-center mt-[25vh] text-red-600 text-8xl">Game
+                    Over</h2>
+                <span
+                    class="block mt-8 text-center text-red-700 text-2xl js-error-score"></span>
+
+                <img
+                    class="w-20 m-auto mt-20 hover:cursor-pointer js-update-img"
+                    src="./images/replay.svg" alt="update img">
+            </div>
+
+            <!-- winner -->
+            <div class="game-winner hidden js-winner">
+                <h2 class="text-white text-8xl mt-[25vh] text-center">You
+                    Win</h2>
+                <img
+                    class="w-20 m-auto mt-20 hover:cursor-pointer js-winner-img"
+                    src="./images/replay1.svg" alt="winner update">
+            </div>
+
+        </section>
+
+        <!-- template  -->
+        <template class="js-play-template">
+            <li class="js-road-item">
+                <div class="relative">
+                    <img
+                        class="w-32 h-[110px] bg-[#a7a7af] p-2 rounded-sm hover:cursor-pointer js-play-img"
+                        src
+                        alt>
+                    <div class="hidden js-question-result">
+                        <img
+                            class="w-10 absolute bottom-0 right-0 js-checkmark"
+                            src="./images/checkmark.gif" alt="checkmark">
+                        <audio id="road-audio">
+                            <source src="./audio/correct-answer.mp3"
+                                type="audio/mp3">
+                        </audio>
+                        <audio id="road-error-audio">
+                            <source src="./audio/wrong-answer.mp3"
+                                type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </li>
+        </template>
+
+        <script src="./js/signs.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url(./images/back-to-future.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.game-over {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/Game\ Over.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* z-index: -1; */
+}
+
+.error__animation {
+    animation-name: errorAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    transition: 0.5s ease all;
+}
+
+.game-winner {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/You\ win.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.poineterin {
+    pointer-events: none;
+}
